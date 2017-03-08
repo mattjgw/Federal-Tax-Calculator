@@ -1,5 +1,5 @@
 // Matthew Wright
-// March 6 2017
+// March 7 2017
 // Federal Tax Calculator
 
 package taxes;
@@ -42,6 +42,11 @@ public class TaxCalculator {
 	{
 		System.out.println("Enter the money you earned through employment:");
 		totalIncome = keyboard.nextDouble();
+		while(totalIncome < 0)
+		{
+			System.out.println("Please enter a number greater than zero:");
+			totalIncome = keyboard.nextDouble();
+		}
 		taxableIncome = totalIncome - 11474; // Every citizen gets a general deduction of $11474
 	}
 	
@@ -49,6 +54,12 @@ public class TaxCalculator {
 	{
 		System.out.println("Enter the money you earned through capital gains:");
 		capitalGains = keyboard.nextDouble();
+		while(capitalGains < 0)
+		{
+			System.out.println("Please enter a number greater than zero:");
+			totalIncome = keyboard.nextDouble();
+		}
+		
 	}
 	
 	private double calculateIncomeTax()
