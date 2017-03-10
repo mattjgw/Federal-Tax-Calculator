@@ -36,6 +36,7 @@ public class Taxes {
 	
 	public static boolean checkIfRunAgain()
 	{
+		@SuppressWarnings("resource")
 		Scanner keyboard = new Scanner(System.in);
 		
 		String answer = null;
